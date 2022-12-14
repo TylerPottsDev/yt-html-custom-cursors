@@ -1,0 +1,82 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+	cursor: none;
+}
+
+.custom-cursor {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+
+.site-wide {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	border: 2px solid black;
+}
+
+.site-wide .pointer {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background-color: black;
+	transition: width 0.1s ease-in-out, height 0.1s ease-in-out;
+}
+
+.site-wide.active .pointer {
+	width: 20px;
+	height: 20px;
+}
+
+.boxes {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.boxes .box {
+	position: relative;
+	width: 300px;
+	height: 300px;
+	overflow: hidden;
+}
+
+.boxes .box:nth-child(1) {
+	background-color: palevioletred;
+}
+
+.boxes .box:nth-child(2) {
+	background-color: palegreen;
+}
+
+.boxes .box:nth-child(3) {
+	background-color: paleturquoise;
+}
+
+.box-bound {
+	display: block;
+	width: 100px;
+	height: 50px;
+	background-position: top left;
+	background-size: contain;
+	background-repeat: no-repeat;
+	transition: width 0.1s ease-in-out, height 0.1s ease-in-out;
+}
+
+.box-bound.active {
+	width: 150px;
+	height: 75px;
+}
